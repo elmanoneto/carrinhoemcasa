@@ -1,0 +1,61 @@
+<section class="categories" ng-controller="CategoriesController">
+  <nav>
+    <div class="btn-group btn-cart pull-right" ng-push-menu="cart">
+      <div class="subtotal">
+        <p class="small-font">SUBTOTAL</p>
+        <p><strong>R${{totalCart}}</strong></p>
+      </div>
+      <div class="totalitems">
+        <p>{{totalItens}}</p>
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-success" ng-click="back()">Voltar</button>
+    </div>
+
+    <ng-slide-push-menu id="cart" position="right">
+      <ul>
+        <li ng-repeat="item in itemsCart">
+          {{item.name}}
+        </li>
+      </ul>
+      <div id="buy">
+        <div class="btn-group" ng-if="totalItens > 0">
+          <hr>
+          <h4>Total: R${{totalCart}}</h4>
+          <button class="btn" ng-click="buy()">Finalizar Compra</button>
+        </div>
+        <div ng-if="totalItens == 0">
+          <p>Seu carrinho está vazio.</p>
+        </div>
+      </div>
+    </ng-slide-push-menu>
+
+    <form action="" class="pull-right form-search">
+      <div class="input-group has-success">
+        <input type="text" class="form-control" placeholder="Encontre um produto..." ng-model="queryFilter">
+      </div>
+    </form>
+  </nav>
+
+  <div class="list">
+    <div class="container">
+  	  <div class="row">
+        <div class="card col-sm-12 col-md-4" ng-repeat="product in products | filter:queryFilter">
+          <img class="card-img-top" ng-src="{{product.image}}" alt="Card image cap" style="width: 100px;height: 100px;">
+          <div class="card-block">
+            <h4 class="card-title">{{product.name}}</h4>
+            <p class="card-text">R${{product.price}}</p>
+            <div class="btn-group">
+              <button class="btn btn-success" ng-click="add(product)">+</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-danger" ng-click="remove(product)">-</button>
+            </div>
+          </div>
+        </div>
+  	  </div>
+    </div>
+  </div>
+</section>

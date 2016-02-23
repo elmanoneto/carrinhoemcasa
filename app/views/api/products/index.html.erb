@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Api Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_products.each do |api_product| %>
+      <tr>
+        <td><%= api_product.name %></td>
+        <td><%= api_product.price %></td>
+        <td><%= api_product.image %></td>
+        <td><%= link_to 'Show', api_product %></td>
+        <td><%= link_to 'Edit', edit_api_product_path(api_product) %></td>
+        <td><%= link_to 'Destroy', api_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_api_product_path %>

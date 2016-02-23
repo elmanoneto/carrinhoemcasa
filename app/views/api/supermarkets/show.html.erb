@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @api_supermarket.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @api_supermarket.description %>
+</p>
+
+<p>
+  <strong>Everyday:</strong>
+  <%= @api_supermarket.everyday %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @api_supermarket.image %>
+</p>
+
+<%= link_to 'Edit', edit_api_supermarket_path(@api_supermarket) %> |
+<%= link_to 'Back', api_supermarkets_path %>

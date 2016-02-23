@@ -1,0 +1,18 @@
+<section id="buy" ng-controller="CategoriesController">
+  <div class="container">
+    <h2>Finalizar compra</h2>
+    <form name="buy" ng-submit="end()">
+      <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1"
+        placeholder="Email" ng-model="email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="exampleInputEmail1"
+        placeholder="Número da casa" ng-model="numero" required>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-success" ng-disabled="buy.$invalid">Finalizar</button>
+      </div>
+    </form>
+  </div>
+</section>

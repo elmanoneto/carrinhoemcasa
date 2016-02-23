@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @api_product.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @api_product.price %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @api_product.image %>
+</p>
+
+<%= link_to 'Edit', edit_api_product_path(@api_product) %> |
+<%= link_to 'Back', api_products_path %>

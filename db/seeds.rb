@@ -1,0 +1,137 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+  # cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+  # Mayor.create(name: 'Emanuel', city: cities.first)
+
+  Api::Cep.create([
+    {cep: '58040-270', street: 'Avenida Maroquinha Ramos',
+    neighborhood: 'Torre', city: 'João Pessoa', state: 'Paraíba'},
+    {cep: '58040-250', street: 'Rua São Sebastião',
+    neighborhood: 'Torre', city: 'João Pessoa', state: 'Paraíba'}
+    ])
+
+  Api::Supermarket.create([
+    {name: 'Pão de Açucar', description: 'Teste de descrição', everyday: true, image:'/images/paodeacucar.jpg'},
+    {name: 'Extra', description: 'Extra supermercado', everyday: true, image: '/images/extra.jpg'},
+    {name: 'Walmart', description: '+ de 1 milhão de itens pra você.', everyday: true, image: '/images/walmart.jpg'},
+    {name: 'Carrefour', description: 'Descrição Carrefour', everyday: true, image: '/images/carrefour.jpg'},
+    {name: 'Mazzi Supermercados', description: 'Descrição Mazzi', everyday: false, image: '/images/mazzi.jpg'},
+    {name: 'Pires Mercado', description: 'Descrição Pires', everyday: false, image: '/images/pires.jpg'},
+    {name: 'Super Barato', description: 'Descrição Super Barato', everyday: false, image: '/images/super.jpg'},
+    {name: 'Líder Supermercados', description: 'Descrição Líder', everyday: false, image: '/images/lider.jpg'},
+    ])
+
+  Api::CepSupermarket.create([
+    {cep_id: 1, supermarket_id: 2},
+    {cep_id: 1, supermarket_id: 3},
+    {cep_id: 1, supermarket_id: 4},
+    {cep_id: 1, supermarket_id: 5},
+    {cep_id: 1, supermarket_id: 6},
+    {cep_id: 2, supermarket_id: 1},
+    {cep_id: 2, supermarket_id: 2},
+    {cep_id: 2, supermarket_id: 7},
+    {cep_id: 2, supermarket_id: 8}
+    ])
+
+  Api::Product.create([
+  {name: 'Água Mineral 10L', price: 10, image: '/images/agua.jpg', category: 'Bebidas'},
+  {name: 'Cerveja Skol 600ml', price: 7.40, image: '/images/cerveja.jpg', category: 'Bebidas'},
+  {name: 'Chá Verde Leão Caixa 24G com 15 Unidades', price: 7.82, image: '/images/cha.jpg', category: 'Bebidas'},
+  {name: 'Iscas de Frango Tradicional Sadia 300g', price: 14.02, image: '/images/iscafrango.jpg', category: 'Carnes'},
+  {name: 'Linguiça Fininha Sadia 240g', price: 5.65, image: '/images/linguica.jpg', category: 'Carnes'},
+  {name: 'Papel Alumínio Wyda 30X4', price: 2.96, image: '/images/papelaluminio.jpg', category: 'Bazar'},
+  {name: 'Carvão Ecológico Ecobrix 3kg', price: 11.83, image: '/images/carvao.jpg', category: 'Bazar'},
+  {name: 'Fósforo Casa Fiat Lux', price: 3.39, image: '/images/fosforo.jpg', category: 'Bazar'},
+  {name: 'Porta Escova de Dente Ricca', price: 3.90, image: '/images/portaescova.jpg', category: 'Bazar'},
+  {name: 'Massa Integral Rap 10 300g', price: 7.68, image: '/images/rap10.jpg', category: 'Padaria'},
+  {name: 'Pão de Forma Pullman 500g', price: 5.21, image: '/images/paodeforma.jpg', category: 'Padaria'},
+  {name: 'Torrada Canapé Bauducco 110g', price: 3.56, image: '/images/torrada.jpg', category: 'Padaria'},
+  {name: 'Chantilly Spray Vigor 250g', price: 29.86, image: '/images/chantilly.jpg', category: 'Sobermesas'},
+  {name: 'Io-Io Crem Misto 180g', price: 6.65, image: '/images/ioiocrem.jpg', category: 'Sobremesas'},
+  {name: 'Chocolate Branco Garoto 150g', price: 5.93, image: '/images/choocolatebranco.jpg', category: 'Sobremesas'},
+  {name: 'Bolo Pinguinos 80g', price: 2.46, image: '/images/bolo.jpg', category: 'Sobremesas'},
+  {name: 'Pudim Trufa Caneca Oetker 40g', price: 3.32, image: '/images/pudim.jpg', category: 'Sobremesas'},
+  {name: 'Azeitona Verde Raiola 200g', price: 7.06, image: '/images/azeitonas.jpg', category: 'Enlatados'},
+  {name: 'Cogumelo Cepêra 70g', price: 9.32, image: '/images/cogumelo.jpg', category: 'Enlatados'},
+  {name: 'Ervilha Bonduelle 200g', price: 2.24, image: '/images/ervilha.jpg', category: 'Enlatados'}
+  ])
+
+  Api::ProductSupermarket.create([
+    {product_id: 1, supermarket_id: 1},
+    {product_id: 1, supermarket_id: 2},
+    {product_id: 1, supermarket_id: 3},
+    {product_id: 1, supermarket_id: 4},
+    {product_id: 1, supermarket_id: 5},
+    {product_id: 1, supermarket_id: 6},
+    {product_id: 1, supermarket_id: 7},
+    {product_id: 1, supermarket_id: 8},
+    {product_id: 2, supermarket_id: 1},
+    {product_id: 2, supermarket_id: 2},
+    {product_id: 2, supermarket_id: 3},
+    {product_id: 2, supermarket_id: 4},
+    {product_id: 2, supermarket_id: 5},
+    {product_id: 2, supermarket_id: 6},
+    {product_id: 2, supermarket_id: 7},
+    {product_id: 2, supermarket_id: 8},
+    {product_id: 3, supermarket_id: 1},
+    {product_id: 3, supermarket_id: 2},
+    {product_id: 3, supermarket_id: 3},
+    {product_id: 3, supermarket_id: 4},
+    {product_id: 3, supermarket_id: 5},
+    {product_id: 3, supermarket_id: 6},
+    {product_id: 3, supermarket_id: 7},
+    {product_id: 3, supermarket_id: 8},
+    {product_id: 4, supermarket_id: 1},
+    {product_id: 4, supermarket_id: 2},
+    {product_id: 4, supermarket_id: 4},
+    {product_id: 4, supermarket_id: 5},
+    {product_id: 4, supermarket_id: 6},
+    {product_id: 4, supermarket_id: 7},
+    {product_id: 4, supermarket_id: 8},
+    {product_id: 5, supermarket_id: 1},
+    {product_id: 5, supermarket_id: 2},
+    {product_id: 5, supermarket_id: 4},
+    {product_id: 5, supermarket_id: 5},
+    {product_id: 5, supermarket_id: 6},
+    {product_id: 5, supermarket_id: 7},
+    {product_id: 5, supermarket_id: 8},
+    {product_id: 6, supermarket_id: 7},
+    {product_id: 7, supermarket_id: 7},
+    {product_id: 8, supermarket_id: 7},
+    {product_id: 9, supermarket_id: 7},
+    {product_id: 10, supermarket_id: 7},
+    {product_id: 6, supermarket_id: 8},
+    {product_id: 7, supermarket_id: 8},
+    {product_id: 8, supermarket_id: 8},
+    {product_id: 9, supermarket_id: 8},
+    {product_id: 10, supermarket_id: 1},
+    {product_id: 11, supermarket_id: 1},
+    {product_id: 12, supermarket_id: 1},
+    {product_id: 10, supermarket_id: 2},
+    {product_id: 11, supermarket_id: 2},
+    {product_id: 12, supermarket_id: 2},
+    {product_id: 10, supermarket_id: 8},
+    {product_id: 13, supermarket_id: 5},
+    {product_id: 14, supermarket_id: 5},
+    {product_id: 15, supermarket_id: 5},
+    {product_id: 16, supermarket_id: 5},
+    {product_id: 17, supermarket_id: 5},
+    {product_id: 13, supermarket_id: 6},
+    {product_id: 14, supermarket_id: 6},
+    {product_id: 15, supermarket_id: 6},
+    {product_id: 16, supermarket_id: 6},
+    {product_id: 17, supermarket_id: 6},
+    #
+    {product_id: 19, supermarket_id: 1},
+    {product_id: 19, supermarket_id: 2},
+    {product_id: 19, supermarket_id: 3},
+    {product_id: 19, supermarket_id: 4},
+    {product_id: 19, supermarket_id: 7},
+    {product_id: 20, supermarket_id: 4},
+    {product_id: 20, supermarket_id: 5},
+    {product_id: 20, supermarket_id: 6},
+    {product_id: 20, supermarket_id: 8},
+    ])

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Api Supermarkets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Everyday</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_supermarkets.each do |api_supermarket| %>
+      <tr>
+        <td><%= api_supermarket.name %></td>
+        <td><%= api_supermarket.description %></td>
+        <td><%= api_supermarket.everyday %></td>
+        <td><%= api_supermarket.image %></td>
+        <td><%= link_to 'Show', api_supermarket %></td>
+        <td><%= link_to 'Edit', edit_api_supermarket_path(api_supermarket) %></td>
+        <td><%= link_to 'Destroy', api_supermarket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supermarket', new_api_supermarket_path %>

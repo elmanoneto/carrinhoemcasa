@@ -1,0 +1,34 @@
+<section class="supermarkets" ng-controller="SupermarketsController">
+  <div id="header">
+    <h2>Supermercados perto de {{cep.cep}}</h2>
+    <hr>
+    <p>{{cep.street}}, {{cep.neighborhood}} - {{cep.city}}, {{cep.state}}</p>
+  </div>
+
+  <div class="container list">
+    <div class="row">
+      <div class="col-md-3" ng-repeat="supermarket in supermarkets">
+        <div class="[ info-card ]" ng-click="goToSupermarket(supermarket.id)">
+          <img style="width: 300px;height: 200px;" ng-src="{{supermarket.image}}" />
+
+          <div class="[ info-card-details ] animate">
+            <div class="[ info-card-header ]">
+              <h1>{{supermarket.name}}</h1>
+              <div ng-switch on="supermarket.everyday">
+                <div ng-switch-when="true">
+                    <h3>Abre todos os dias</h3>
+                </div>
+                <div ng-switch-default>
+                    <h3>Não abre aos domingos</h3>
+                </div>
+              </div>
+            </div>
+            <div class="[ info-card-detail ]">
+              <p>{{supermarket.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

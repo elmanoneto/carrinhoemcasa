@@ -1,0 +1,152 @@
+// Place all the styles related to the supermarkets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body#supermarkets {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+header#supermarkets {
+  background-color: #29C988;
+  position: relative;
+  top: 0px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 10px;
+
+  h1 {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+section.supermarkets {
+
+  padding: 0 50px;
+
+  div#header {
+    text-align: center;
+  }
+
+  div#header h2 {
+    color: #7F8683;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  div#header hr {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #29C988;
+    padding: 0;
+    width: 502px;
+  }
+
+  div#header p {
+    top: 7px;
+    position: relative;
+  }
+
+  .list {
+    padding: 10px 0;
+  }
+
+  .animate {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .info-card {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .info-card > img {
+    width: 100px;
+    margin-bottom: 60px;
+  }
+  .info-card .info-card-details,
+  .info-card .info-card-details .info-card-header  {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    padding: 0 15px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .info-card .info-card-details::-webkit-scrollbar {
+    width: 8px;
+  }
+  .info-card .info-card-details::-webkit-scrollbar-button {
+    width: 8px;
+    height: 0px;
+  }
+  .info-card .info-card-details::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .info-card .info-card-details::-webkit-scrollbar-thumb {
+    background: rgb(160, 160, 160);
+  }
+  .info-card .info-card-details::-webkit-scrollbar-thumb:hover {
+    background: rgb(130, 130, 130);
+  }
+
+  .info-card .info-card-details .info-card-header {
+    height: auto;
+    bottom: 100%;
+    padding: 10px 5px;
+  }
+  .info-card:hover .info-card-details {
+    bottom: 0px;
+    overflow: auto;
+    padding-bottom: 25px;
+  }
+  .info-card:hover .info-card-details .info-card-header {
+    position: relative;
+    bottom: 0px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+  .info-card .info-card-details .info-card-header h1,
+  .info-card .info-card-details .info-card-header h3 {
+    color: rgb(62, 62, 62);
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .info-card .info-card-details .info-card-header h3 {
+    color: #29c988;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  .info-card .info-card-details .info-card-detail .social {
+    list-style: none;
+    padding: 0px;
+    margin-top: 25px;
+    text-align: center;
+  }
+  .info-card .info-card-details .info-card-detail .social a {
+    position: relative;
+    display: inline-block;
+    min-width: 40px;
+    padding: 10px 0px;
+    margin: 0px 5px;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(215, 215, 215);
+    border-radius: 40px;
+  }
+}

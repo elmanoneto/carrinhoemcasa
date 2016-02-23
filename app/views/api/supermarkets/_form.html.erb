@@ -1,0 +1,33 @@
+<%= form_for(@api_supermarket) do |f| %>
+  <% if @api_supermarket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@api_supermarket.errors.count, "error") %> prohibited this api_supermarket from being saved:</h2>
+
+      <ul>
+      <% @api_supermarket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :everyday %><br>
+    <%= f.check_box :everyday %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

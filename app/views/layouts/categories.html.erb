@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="CarrinhoEmCasa">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Carrinho em Casa</title>
+  <%= stylesheet_link_tag '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="supermarkets">
+  <header id="supermarkets">
+    <h1>Carrinho em Casa</h1>
+  </header>
+
+  <%= yield %>
+
+  <!-- <footer>
+    <p>
+      Desenvolvido por <strong>Elmano Neto</strong>.
+    </p>
+  </footer> -->
+</body>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</html>

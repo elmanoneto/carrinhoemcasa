@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Api Ceps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cep</th>
+      <th>Street</th>
+      <th>Neighborhood</th>
+      <th>City</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @api_ceps.each do |api_cep| %>
+      <tr>
+        <td><%= api_cep.cep %></td>
+        <td><%= api_cep.street %></td>
+        <td><%= api_cep.neighborhood %></td>
+        <td><%= api_cep.city %></td>
+        <td><%= api_cep.state %></td>
+        <td><%= link_to 'Show', api_cep %></td>
+        <td><%= link_to 'Edit', edit_api_cep_path(api_cep) %></td>
+        <td><%= link_to 'Destroy', api_cep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cep', new_api_cep_path %>

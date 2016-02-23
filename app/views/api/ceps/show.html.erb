@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @api_cep.cep %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @api_cep.street %>
+</p>
+
+<p>
+  <strong>Neighborhood:</strong>
+  <%= @api_cep.neighborhood %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @api_cep.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @api_cep.state %>
+</p>
+
+<%= link_to 'Edit', edit_api_cep_path(@api_cep) %> |
+<%= link_to 'Back', api_ceps_path %>

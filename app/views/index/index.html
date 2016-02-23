@@ -1,0 +1,11 @@
+<div class="cep" ng-controller="CEPController">
+  <h3>Informe seu CEP</h3>
+  <form ng-submit="proceed(cep)">
+    <div class="form-group has-success">
+      <input type="tel" ng-model="cep" mask="00000-000" mask-restrict="accept"
+      class="form-control" id="cep" required>
+      <button type="submit" class="btn btn-success" ng-disabled="!cep">Prosseguir</button>
+    </div>
+  </form>
+  <p id="error" ng-if="error">{{error}}</p>
+</div>
